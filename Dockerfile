@@ -12,7 +12,7 @@ ARG CHROMEDRIVER_VERSION=84.0.4147.30
 
 RUN set -x \
     && apt-get update -qqy \
-    && apt-get -qqy --no-install-recommends install libgtk-3-0 xvfb firefox-esr libavcodec-extra \
+    && apt-get -qqy --no-install-recommends install libgtk-3-0 xvfb firefox-esr libavcodec-extra ttf-dejavu fontconfig \
     && rm -rf /var/lib/apt/lists/* /var/cache/apt/* \
     && wget --no-verbose -O /tmp/firefox.tar.bz2 "https://download-installer.cdn.mozilla.net/pub/firefox/releases/${FIREFOX_VERSION}/linux-x86_64/en-US/firefox-${FIREFOX_VERSION}.tar.bz2" \
     && apt-get -y purge firefox-esr \
